@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace LearningScripts.Models
+﻿namespace LearningScripts.Models
 {
     public class Book
     {
-        [FromQuery]
+        //[FromQuery]
         public int? BookId { get; set; }
 
         public string? Author { get; set; }

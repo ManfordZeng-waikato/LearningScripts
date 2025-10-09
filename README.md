@@ -14,4 +14,5 @@ The code is written for study purposes only and does not provide real applicatio
 - Model Binding
   - Query String vs Route Data
   - Model Class
+  - Form Urlencoded and Form-data
 - Personal learning notes  
