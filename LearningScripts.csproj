@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="CV-Manford Zeng.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="myroot\" />
   </ItemGroup>
 

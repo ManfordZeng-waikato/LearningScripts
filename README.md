@@ -7,4 +7,8 @@ The code is written for study purposes only and does not provide real applicatio
 - Basic middleware exercises  
 - Request and response handling  
 - Routing  and static files
+- Controller and Controller class
+  - IActionResult
+  - Status Code Results
+  - Redirect Results
 - Personal learning notes  
