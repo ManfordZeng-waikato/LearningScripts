@@ -13,4 +13,5 @@ The code is written for study purposes only and does not provide real applicatio
   - Redirect Results
 - Model Binding
   - Query String vs Route Data
+  - Model Class
 - Personal learning notes  

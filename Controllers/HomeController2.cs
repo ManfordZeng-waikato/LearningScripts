@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LearningScripts.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LearningScripts.Controllers
 {
     public class HomeController2 : Controller
     {
-        [Route("bookstore/{bookid?}/{isloggedin?}")]
+        [Route("bookstore/{bookid?}/{isloggedin?}/{author?}")]
         //URL: /bookstore?bookid=10&isloggedin=true
-        public IActionResult Index([FromQuery] int? bookid, [FromQuery] bool? isloggedin)
+        public IActionResult Index([FromQuery] int? bookid,
+            [FromRoute] bool? isloggedin, Book book)
         {
             if (!bookid.HasValue)
             {
@@ -26,8 +28,10 @@ namespace LearningScripts.Controllers
                 return Unauthorized("User must be authenticated");
             }
 
+            return Content($"Book ID: {bookid}, Book:{book}", "text/plain");
+
             //302-found
-            return RedirectToAction("Books", "Store", new { id = bookid });
+            //return RedirectToAction("Books", "Store", new { id = bookid });
             //return LocalRedirect($"store/books/{bookId}");
             //return Redirect($"store/books/{bookId}");
 
