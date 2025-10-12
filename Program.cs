@@ -7,7 +7,10 @@ namespace LearningScripts
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            var builder = WebApplication.CreateBuilder(new WebApplicationOptions()
+            {
+                WebRootPath = "myroot"
+            });
             //builder.Services.AddTransient<MycustomMiddleware>();
 
             //register custom custom constraints service
@@ -28,6 +31,8 @@ namespace LearningScripts
             //    await next(context);
             //});
 
+            //Webroot and UseStaticFiles
+            app.UseStaticFiles();
 
             //enable routing
             app.UseRouting();

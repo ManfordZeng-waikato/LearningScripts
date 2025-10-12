@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="myroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\hashes.txt" />
+  </ItemGroup>
+
 </Project>
