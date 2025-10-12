@@ -4,7 +4,8 @@ namespace LearningScripts.Models
 {
     public class User
     {
-        [Required(ErrorMessage = "User name can't be null or empty")]
+        [Required(ErrorMessage = "{0} can't be null or empty")]
+        [Display(Name = "User Name")]
         public string? UserName { get; set; }
         public string? Email { get; set; }
         public string? Phone { get; set; }
