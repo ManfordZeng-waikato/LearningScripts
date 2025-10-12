@@ -24,5 +24,8 @@ The code is written for study purposes only and does not provide real applicatio
 	- [Compare]
 	- [Email]
 	- [Phone]
+	- [ValidateNever]
+	- Custom Validation
+	  -With Multiple properties / Reflection
   - ModelState
 - Personal learning notes  

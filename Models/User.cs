@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using LearningScripts.CustomValidators;
+using System.ComponentModel.DataAnnotations;
 
 namespace LearningScripts.Models
 {
@@ -27,6 +28,14 @@ namespace LearningScripts.Models
 
         [Range(0, 999.99, ErrorMessage = "{0} should be between ${1} and ${2}")]
         public double? Price { get; set; }
+
+        [MinimumYearValidator(2005, ErrorMessage = "Date of Birth should be newer than Jan 01, {0}")]
+        public DateTime? DateOfBirth { get; set; }
+
+        public DateTime? FromDate { get; set; }
+
+        [DateRangeValidator("FromDate", ErrorMessage = "'FromDate' should older than or equal to 'ToDate'")]
+        public DateTime? ToDate { get; set; }
 
 
         public override string ToString()
