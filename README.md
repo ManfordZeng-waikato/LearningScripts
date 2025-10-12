@@ -6,5 +6,5 @@ The code is written for study purposes only and does not provide real applicatio
 ## Contents
 - Basic middleware exercises  
 - Request and response handling  
-- Parsing form data and request body  
+- Routing  and static files
 - Personal learning notes  
