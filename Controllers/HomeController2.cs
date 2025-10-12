@@ -4,35 +4,30 @@ namespace LearningScripts.Controllers
 {
     public class HomeController2 : Controller
     {
-        [Route("bookstore")]
-        public IActionResult Index()
+        [Route("bookstore/{bookid?}/{isloggedin?}")]
+        //URL: /bookstore?bookid=10&isloggedin=true
+        public IActionResult Index([FromQuery] int? bookid, [FromQuery] bool? isloggedin)
         {
-            if (!Request.Query.ContainsKey("bookid"))
+            if (!bookid.HasValue)
             {
-                return BadRequest("Book ID is not supplied");
+                return BadRequest("Book ID is not supplied or empty");
             }
 
-            if (string.IsNullOrEmpty(Convert.ToString(Request.Query["bookid"])))
+            if (bookid <= 0)
             {
-                return BadRequest("book id can't be null or empty");
+                return BadRequest("book id can't be less or equal to zero");
             }
-
-            int bookId = Convert.ToInt32(ControllerContext.HttpContext.Request.Query["bookid"]);
-            if (bookId <= 0)
-            {
-                return BadRequest("Book id can't be less or equal to zero");
-            }
-            if (bookId > 1000)
+            if (bookid > 1000)
             {
                 return BadRequest("Book Id can't greater  than 1000");
             }
-            if (Convert.ToBoolean(Request.Query["isloggedin"]) == false)
+            if (isloggedin == false)
             {
                 return Unauthorized("User must be authenticated");
             }
 
             //302-found
-            return RedirectToAction("Books", "Store", new { id = bookId });
+            return RedirectToAction("Books", "Store", new { id = bookid });
             //return LocalRedirect($"store/books/{bookId}");
             //return Redirect($"store/books/{bookId}");
 

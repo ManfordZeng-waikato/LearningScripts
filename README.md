@@ -11,4 +11,6 @@ The code is written for study purposes only and does not provide real applicatio
   - IActionResult
   - Status Code Results
   - Redirect Results
+- Model Binding
+  - Query String vs Route Data
 - Personal learning notes  
