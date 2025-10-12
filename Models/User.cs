@@ -7,10 +7,22 @@ namespace LearningScripts.Models
         [Required(ErrorMessage = "{0} can't be null or empty")]
         [Display(Name = "User Name")]
         [StringLength(40, MinimumLength = 3, ErrorMessage = "{0} should be between {2} and {1} long")]
+        [RegularExpression("^[A-Za-z .]$", ErrorMessage = "{0} should contain only alphabets, space and dot(.)")]
         public string? UserName { get; set; }
+
+        [Required]
+        [EmailAddress]
         public string? Email { get; set; }
+
+        [Phone]
+        //[ValidateNever]
         public string? Phone { get; set; }
+
+        [Required]
+
         public string? Password { get; set; }
+        [Required]
+        [Compare("Password", ErrorMessage = "{0} and {1} do not match")]
         public string? ConfirmPassword { get; set; }
 
         [Range(0, 999.99, ErrorMessage = "{0} should be between ${1} and ${2}")]

@@ -21,5 +21,8 @@ The code is written for study purposes only and does not provide real applicatio
 	- [Display]
 	- [StringLength(max,min)]
 	- [Range(min,max)]
+	- [Compare]
+	- [Email]
+	- [Phone]
   - ModelState
 - Personal learning notes  
