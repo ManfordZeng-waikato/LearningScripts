@@ -16,5 +16,10 @@ The code is written for study purposes only and does not provide real applicatio
   - Model Class
   - Form Urlencoded and Form-data
   - Model Validation 
+	- [Required]
+	- {0} string.Format
+	- [Display]
+	- [StringLength(max,min)]
+	- [Range(min,max)]
   - ModelState
 - Personal learning notes  
