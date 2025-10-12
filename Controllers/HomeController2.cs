@@ -7,7 +7,7 @@ namespace LearningScripts.Controllers
     {
         [Route("bookstore/{bookid?}/{isloggedin?}/{author?}")]
         //URL: /bookstore?bookid=10&isloggedin=true
-        public IActionResult Index([FromQuery] int? bookid,
+        public IActionResult Index(int? bookid,
             [FromRoute] bool? isloggedin, Book book)
         {
             if (!bookid.HasValue)
