@@ -27,5 +27,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- [ValidateNever]
 	- Custom Validation
 	  -With Multiple properties / Reflection
+	- IValidatableObject, yield
   - ModelState
 - Personal learning notes  
