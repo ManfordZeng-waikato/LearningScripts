@@ -29,4 +29,5 @@ The code is written for study purposes only and does not provide real applicatio
 	  -With Multiple properties / Reflection
 	- IValidatableObject, yield
   - ModelState
+  - Bind and BindNever
 - Personal learning notes  

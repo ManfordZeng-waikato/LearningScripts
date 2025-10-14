@@ -1,9 +1,10 @@
 ﻿using LearningScripts.CustomValidators;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
 
 namespace LearningScripts.Models
 {
-    public class User : IValidatableObject
+    public class UserProfile : IValidatableObject
     {
         [Required(ErrorMessage = "{0} can't be null or empty")]
         [Display(Name = "User Name")]
@@ -20,7 +21,7 @@ namespace LearningScripts.Models
         public string? Phone { get; set; }
 
         [Required]
-
+        [BindNever]
         public string? Password { get; set; }
         [Required]
         [Compare("Password", ErrorMessage = "{0} and {1} do not match")]

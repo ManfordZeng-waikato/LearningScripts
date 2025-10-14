@@ -5,7 +5,9 @@ namespace LearningScripts.Controllers
     public class UserController : Controller
     {
         [Route("register")]
-        public IActionResult Index(User user)
+
+        //[Bind(nameof(UserProfile.UserName), nameof(UserProfile.Password))]
+        public IActionResult Index(UserProfile user)
         {
             if (!ModelState.IsValid)
             {
