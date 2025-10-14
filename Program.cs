@@ -21,6 +21,7 @@ namespace LearningScripts
 
             //add all the controllers as services
             builder.Services.AddControllers();
+            builder.Services.AddControllers().AddXmlSerializerFormatters();
 
             var app = builder.Build();
 

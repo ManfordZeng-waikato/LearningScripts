@@ -31,4 +31,6 @@ The code is written for study purposes only and does not provide real applicatio
   - ModelState
   - Bind and BindNever
   - FromBody
+	- json
+	- XmlSerializerInputFormatter
 - Personal learning notes  
