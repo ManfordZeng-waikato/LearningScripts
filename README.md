@@ -30,4 +30,5 @@ The code is written for study purposes only and does not provide real applicatio
 	- IValidatableObject, yield
   - ModelState
   - Bind and BindNever
+  - FromBody
 - Personal learning notes  
