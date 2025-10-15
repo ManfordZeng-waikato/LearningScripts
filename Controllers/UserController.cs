@@ -9,7 +9,7 @@ namespace LearningScripts.Controllers
         //[Bind(nameof(UserProfile.UserName), nameof(UserProfile.Password))]
 
         //[ModelBinder(BinderType = typeof(UserBinder))]
-        public IActionResult Index(UserProfile user)
+        public IActionResult Index(UserProfile user, [FromHeader(Name = "User-Agent")] string UserAgent)
         {
             if (!ModelState.IsValid)
             {
@@ -31,7 +31,7 @@ namespace LearningScripts.Controllers
                 //}
                 return BadRequest(errors);
             }
-            return Content($"{user}");
+            return Content($"{user},{UserAgent}");
         }
     }
 }
