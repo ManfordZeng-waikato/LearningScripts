@@ -1,5 +1,4 @@
-﻿using LearningScripts.CustomerModelBinders;
-using LearningScripts.Models;
+﻿using LearningScripts.Models;
 using Microsoft.AspNetCore.Mvc;
 namespace LearningScripts.Controllers
 {
@@ -8,7 +7,9 @@ namespace LearningScripts.Controllers
         [Route("register")]
 
         //[Bind(nameof(UserProfile.UserName), nameof(UserProfile.Password))]
-        public IActionResult Index([FromBody][ModelBinder(BinderType = typeof(UserBinder))] UserProfile user)
+
+        //[ModelBinder(BinderType = typeof(UserBinder))]
+        public IActionResult Index([FromBody] UserProfile user)
         {
             if (!ModelState.IsValid)
             {

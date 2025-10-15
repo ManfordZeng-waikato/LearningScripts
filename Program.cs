@@ -1,4 +1,5 @@
 using LearningScripts.CustomConstraints;
+using LearningScripts.CustomerModelBinders;
 
 namespace LearningScripts
 {
@@ -20,7 +21,10 @@ namespace LearningScripts
             });
 
             //add all the controllers as services
-            builder.Services.AddControllers();
+            builder.Services.AddControllers(options =>
+            {
+                options.ModelBinderProviders.Insert(0, new UserBinderProvider());
+            });
             builder.Services.AddControllers().AddXmlSerializerFormatters();
 
             var app = builder.Build();

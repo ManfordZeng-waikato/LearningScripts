@@ -34,4 +34,5 @@ The code is written for study purposes only and does not provide real applicatio
 	- json
 	- XmlSerializerInputFormatter
   - Custom Model Binders
+  - Custom Model Binder Providers 
 - Personal learning notes  
