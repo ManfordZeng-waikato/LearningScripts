@@ -9,7 +9,7 @@ namespace LearningScripts.Controllers
         //[Bind(nameof(UserProfile.UserName), nameof(UserProfile.Password))]
 
         //[ModelBinder(BinderType = typeof(UserBinder))]
-        public IActionResult Index([FromBody] UserProfile user)
+        public IActionResult Index(UserProfile user)
         {
             if (!ModelState.IsValid)
             {

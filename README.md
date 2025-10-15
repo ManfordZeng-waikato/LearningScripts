@@ -35,4 +35,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- XmlSerializerInputFormatter
   - Custom Model Binders
   - Custom Model Binder Providers 
+  - Collection Binding
+ 
 - Personal learning notes  
