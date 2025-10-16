@@ -41,5 +41,6 @@ The code is written for study purposes only and does not provide real applicatio
   - Razor View Engine
 	- If
 	- Switch
+	- Foreach / For
  
 - Personal learning notes  

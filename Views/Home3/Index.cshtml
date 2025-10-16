@@ -2,7 +2,13 @@
 
 @{
     string appTitle = "ASP.NET CORE APP";
-    Book book = new Book() {BookId=3, Author= "Manford",AuthorGender= Book.Gender.Male};
+    // Book book = new Book() {BookId=3, Author= "Manford",AuthorGender= Book.Gender.Male};
+    List<Book> books = new List<Book>()
+    {
+        new Book() {BookId=3, Author= "Manford",AuthorGender= Book.Gender.Male},
+        new Book() {BookId=2, Author= "Wenji",AuthorGender= Book.Gender.Female},
+        new Book() {BookId=1, Author= "Manf0rd",AuthorGender= Book.Gender.Other},
+    };
 }
 
 <!DOCTYPE html>
@@ -14,12 +20,12 @@
    <body>
     <h1>welcome</h1>
     
-    @if (book.BookId.HasValue)
+    @* @if (book.BookId.HasValue)
     {
         <h2>@book</h2>
-    }
+    } *@
 
-    @switch (book.AuthorGender)
+    @* @switch (book.AuthorGender)
     {
         case Book.Gender.Male:
             <p>Happy men's day</p>
@@ -34,8 +40,34 @@
             ;
             break;
 
+    } *@
+
+    @foreach (var book in books)
+    {
+        <div>
+            @book.Author
+            <span>, </span>
+            <span>@book.AuthorGender</span>
+            @if (book.BookId!=null)
+            {
+                <span>@book.BookId</span>
+            }
+        </div>
     }
 
+    @for (int i = 0; i < 2; i++)
+    {
+        Book book = books[i];
+        <div>
+            @book.Author
+            <span>, </span>
+            <span>@book.AuthorGender</span>
+            @if (book.BookId != null)
+            {
+                <span>@book.BookId</span>
+            }
+        </div>
 
+    }
    </body>
 </html>
