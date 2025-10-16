@@ -42,5 +42,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- If
 	- Switch
 	- Foreach / For
+	- Literal
  
 - Personal learning notes  

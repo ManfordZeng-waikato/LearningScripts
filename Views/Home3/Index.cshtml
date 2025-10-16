@@ -44,6 +44,7 @@
 
     @foreach (var book in books)
     {
+        @:Hello to
         <div>
             @book.Author
             <span>, </span>
@@ -58,6 +59,7 @@
     @for (int i = 0; i < 2; i++)
     {
         Book book = books[i];
+        <text>Hello to</text>
         <div>
             @book.Author
             <span>, </span>
