@@ -13,6 +13,10 @@ namespace LearningScripts
             });
             //builder.Services.AddTransient<MycustomMiddleware>();
 
+
+            builder.Services.AddControllersWithViews();
+
+
             //register custom custom constraints service
             builder.Services.AddRouting(options =>
             {
