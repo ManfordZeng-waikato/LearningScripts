@@ -39,5 +39,7 @@ The code is written for study purposes only and does not provide real applicatio
 -Model View Controller
   - View
   - Razor View Engine
+	- If
+	- Switch
  
 - Personal learning notes  

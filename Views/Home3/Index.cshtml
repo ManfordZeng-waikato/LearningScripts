@@ -2,7 +2,7 @@
 
 @{
     string appTitle = "ASP.NET CORE APP";
-    Book book = new Book() {BookId=3, Author= "Manford" };
+    Book book = new Book() {BookId=3, Author= "Manford",AuthorGender= Book.Gender.Male};
 }
 
 <!DOCTYPE html>
@@ -13,6 +13,29 @@
    </head>
    <body>
     <h1>welcome</h1>
-    <h2>@book</h2>
+    
+    @if (book.BookId.HasValue)
+    {
+        <h2>@book</h2>
+    }
+
+    @switch (book.AuthorGender)
+    {
+        case Book.Gender.Male:
+            <p>Happy men's day</p>
+            ;
+            break;
+        case Book.Gender.Female:
+            <p>Happy women's day</p>
+            ;
+            break;
+        case Book.Gender.Other:
+            <p> Happy Transgender's day </p>
+            ;
+            break;
+
+    }
+
+
    </body>
 </html>

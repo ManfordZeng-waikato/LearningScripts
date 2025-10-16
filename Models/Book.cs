@@ -7,7 +7,14 @@
 
         public string? Author { get; set; }
 
+        public Gender AuthorGender { get; set; }
 
+
+
+        public enum Gender
+        {
+            Male, Female, Other
+        }
         public override string ToString()
         {
             return $"Book object - Book id:{BookId}, Author:{Author}";
