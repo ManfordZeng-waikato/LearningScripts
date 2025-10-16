@@ -38,5 +38,6 @@ The code is written for study purposes only and does not provide real applicatio
   - Collection Binding
 -Model View Controller
   - View
+  - Razor View Engine
  
 - Personal learning notes  

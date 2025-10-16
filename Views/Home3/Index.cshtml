@@ -1,10 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@using LearningScripts.Models
+
+@{
+    string appTitle = "ASP.NET CORE APP";
+    Book book = new Book() {BookId=3, Author= "Manford" };
+}
+
+<!DOCTYPE html>
 <html>
    <head>
-       <title>ASP.NET CORE APP</title>
+       <title>@appTitle</title>
        <meta charset="utf-8" />
    </head>
    <body>
-       welcome
+    <h1>welcome</h1>
+    <h2>@book</h2>
    </body>
 </html>
