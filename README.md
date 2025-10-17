@@ -44,5 +44,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- Foreach / For
 	- Literal
 	- Local Functions
+	- Html.Raw()
  
 - Personal learning notes  

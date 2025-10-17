@@ -11,7 +11,7 @@
     };
 }
 
-@functions{
+@{
     double? GetAge(DateTime? releaseDate)
     {
         if (releaseDate.HasValue)
@@ -23,6 +23,9 @@
             return null;
         }
     }
+
+    string alertMessage = $"<script>alert('{books.Count} books found')</script>";
+
 }
 
 <!DOCTYPE html>
@@ -32,6 +35,8 @@
        <meta charset="utf-8" />
    </head>
    <body>
+
+       @Html.Raw(alertMessage)
     <h1>welcome</h1>
     
     @* @if (book.BookId.HasValue)
