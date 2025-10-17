@@ -9,6 +9,8 @@
 
         public Gender AuthorGender { get; set; }
 
+        public DateTime? ReleaseDate { get; set; }
+
 
 
         public enum Gender

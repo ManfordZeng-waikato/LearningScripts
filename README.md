@@ -43,5 +43,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- Switch
 	- Foreach / For
 	- Literal
+	- Local Functions
  
 - Personal learning notes  
