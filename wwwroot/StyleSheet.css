@@ -1,0 +1,138 @@
+/* =====================================
+   StyleSheet.css — Simple and clean page styling
+   Designed for Razor / ASP.NET MVC pages
+   ===================================== */
+
+:root {
+    --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --color-bg: #f5f7fa;
+    --color-surface: #ffffff;
+    --color-text: #1a1a1a;
+    --color-muted: #6b7280;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1e40af;
+    --radius-md: 10px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic Page Style */
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.page-content {
+    width: min(95%, 900px);
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+}
+
+h1, h2, h3 {
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p, span, div {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Card Style for Each Book */
+.book-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .book-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .book-card span {
+        display: inline-block;
+        margin-right: 0.5rem;
+        color: var(--color-muted);
+    }
+
+/* Button Style */
+button, .btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+    button:hover, .btn:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+/* Table Style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #e8ecf5;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .page-content {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}

@@ -45,5 +45,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- Literal
 	- Local Functions
 	- Html.Raw()
+	- View Data
  
 - Personal learning notes  
