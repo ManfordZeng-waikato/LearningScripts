@@ -15,7 +15,8 @@ namespace LearningScripts.Controllers
              new Book() {BookId=2, Author= "Wenji",AuthorGender= Book.Gender.Female, ReleaseDate=DateTime.Parse ("2003-09-15")},
              new Book() {BookId=1, Author= "Manf0rd",AuthorGender= Book.Gender.Other,ReleaseDate=DateTime.Parse ("2002-09-15")},
              };
-            ViewData["books"] = books;
+            //ViewData["books"] = books;
+            ViewBag.books = books;
 
             //views/Home/Index.cshtml
             return View();

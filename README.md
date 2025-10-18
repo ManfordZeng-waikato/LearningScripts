@@ -46,5 +46,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- Local Functions
 	- Html.Raw()
 	- View Data
+	- View Bag
  
 - Personal learning notes  

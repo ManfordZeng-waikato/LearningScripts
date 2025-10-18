@@ -20,7 +20,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-       <title>@ViewData["appTitle"]</title>
+       <title>@ViewBag.appTitle</title>
        <meta charset="utf-8" />
        <link href="~/StyleSheet.css" rel="stylesheet"/>
    </head>
@@ -51,10 +51,10 @@
     } *@
 
     @{
-      List<Book>? books= (List<Book>) ViewData["books"];
+      // List<Book>? books= (List<Book>) ViewData["books"];
     }
 
-    @foreach (var book in books)
+    @foreach (Book book in ViewBag.books)
     {
         @:Hello to
         <div class="box">
@@ -67,22 +67,22 @@
                  </tr>
                  <tr>
                             <td>Release Date</td>
-                            <td>@book.ReleaseDate.Value.ToString("MM/dd/yyyy")</td>
+                            <td>@book.ReleaseDate?.ToString("MM/dd/yyyy")</td>
                  </tr>
              </tbody>
             </table>
             <span>, </span>
             <span>@book.AuthorGender</span>
             @if (book.BookId!=null)
-            {
+            { 
                 <span>@book.BookId</span>
             }
         </div>
     }
 
-    @for (int i = 0; i < 2; i++)
+    @* @for (int i = 0; i < 2; i++)
     {
-        Book book = books[i];
+        Book book =ViewBag.books[i];
         <text>Hello to</text>
         <div>
             @book.Author
@@ -95,7 +95,7 @@
             }
         </div>
 
-        }
+        } *@
     </div>
    </body>
 </html>
