@@ -41,5 +41,18 @@ namespace LearningScripts.Controllers
             }
             else { return Content("Book ID can't be null"); }
         }
+
+        [Route("book-with-product")]
+        public IActionResult BookAndProduct()
+        {
+            Book book = new Book()
+            { BookId = 3, Author = "Manford", AuthorGender = Book.Gender.Male, ReleaseDate = DateTime.Parse("2001-09-15") };
+            Product product = new Product() { ProductName = "Book Cover", ProductID = 1 };
+
+            BookAndProductWrapper bookAndProductWrapper = new BookAndProductWrapper()
+            { BookData = book, ProductData = product };
+
+            return View(bookAndProductWrapper);
+        }
     }
 }

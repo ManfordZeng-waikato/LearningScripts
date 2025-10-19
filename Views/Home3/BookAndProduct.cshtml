@@ -1,0 +1,45 @@
+﻿@using LearningScripts.Models
+@model BookAndProductWrapper
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-content">
+        <h1>Book and Product</h1>
+        <h3>Book</h3>
+        <table class="table w-100">
+            <tbody>
+                <tr>
+                    <td>Author</td>
+                    <td>@Model.BookData.Author</td>
+                </tr>
+                <tr>
+                    <td>Release Date</td>
+                    <td>@Model.BookData.ReleaseDate?.ToString("MM/yy/dd")</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Product</h3>
+        <table class="table w-100">
+            <tbody>
+                <tr>
+                    <td>Product Name</td>
+                    <td>@Model.ProductData.ProductName</td>
+                </tr>
+                <tr>
+                    <td>Product ID</td>
+                    <td>@Model.ProductData.ProductID</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="/home">Back to HomePage</a>
+
+    </div>
+</body>
+</html>

@@ -48,5 +48,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- View Data
 	- View Bag
 	- Strongly Type	Views
+	  - With Multiple Models
  
 - Personal learning notes  

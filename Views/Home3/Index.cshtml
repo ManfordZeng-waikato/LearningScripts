@@ -19,21 +19,21 @@
 
 <!DOCTYPE html>
 <html>
-   <head>
-       <title>@ViewBag.appTitle</title>
-       <meta charset="utf-8" />
-       <link href="~/StyleSheet.css" rel="stylesheet"/>
-   </head>
-   <body>
-       <div class="page-content">
-    <h1>welcome</h1>
-    
-    @* @if (book.BookId.HasValue)
+<head>
+    <title>@ViewBag.appTitle</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-content">
+        <h1>welcome</h1>
+
+        @* @if (book.BookId.HasValue)
     {
         <h2>@book</h2>
     } *@
 
-    @* @switch (book.AuthorGender)
+        @* @switch (book.AuthorGender)
     {
         case Book.Gender.Male:
             <p>Happy men's day</p>
@@ -50,32 +50,40 @@
 
     } *@
 
-    @{
-      // List<Book>? books= (List<Book>) ViewData["books"];
-    }
+        @{
+            // List<Book>? books= (List<Book>) ViewData["books"];
+        }
 
-    @foreach (Book book in Model)
-    {
-        @:Hello to
-        <div class="box">
+        @foreach (Book book in Model)
+        {
+            @:Hello to
+            <div class="box">
                 <h3>@book.Author</h3>
-            <table class="table w-100">
-             <tbody>
-                 <tr>
-                     <td>Author Gender</td>
-                     <td>@book.AuthorGender</td>
-                 </tr>
-                 <tr>
+                <table class="table w-100">
+                    <tbody>
+                        <tr>
+                            <td>Author Gender</td>
+                            <td>@book.AuthorGender</td>
+                        </tr>
+                        <tr>
                             <td>Release Date</td>
                             <td>@book.ReleaseDate?.ToString("MM/dd/yyyy")</td>
-                 </tr>
-             </tbody>
-            </table>
-            <a href="/book-details/@book.BookId">Details</a>
-        </div>
-    }
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <a href="/book-details/@book.BookId">Details</a>
+                </div>
 
-    @* @for (int i = 0; i < 2; i++)
+
+            </div>
+        }
+
+        <div>
+            <a href="/book-with-product">Book with Product</a>
+        </div>
+
+        @* @for (int i = 0; i < 2; i++)
     {
         Book book =ViewBag.books[i];
         <text>Hello to</text>
@@ -92,5 +100,5 @@
 
         } *@
     </div>
-   </body>
+</body>
 </html>
