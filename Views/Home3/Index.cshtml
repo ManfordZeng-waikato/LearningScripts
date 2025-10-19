@@ -71,12 +71,7 @@
                  </tr>
              </tbody>
             </table>
-            <span>, </span>
-            <span>@book.AuthorGender</span>
-            @if (book.BookId!=null)
-            { 
-                <span>@book.BookId</span>
-            }
+            <a href="/book-details/@book.BookId">Details</a>
         </div>
     }
 

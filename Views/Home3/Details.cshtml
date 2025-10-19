@@ -1,0 +1,33 @@
+﻿@using LearningScripts.Models
+@model Book
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-content">
+        <h1>Book Details</h1>
+        <h3>@Model.Author</h3>
+      <table class="table w-100">
+          <tbody>
+             <tr>
+                 <td>Gender</td>
+                 <td>@Model.AuthorGender</td>
+             </tr>
+             <tr>
+                  <td>Release Date</td>
+                  <td>@Model.ReleaseDate?.ToString("MM/yy/dd")</td>
+             </tr>
+            </tbody>
+      </table>
+      <a href="/home">Back to HomePage</a>
+              
+    </div>
+        }
+
+    </div>
+</body>
+</html>

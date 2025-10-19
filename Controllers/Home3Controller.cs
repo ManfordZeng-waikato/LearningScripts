@@ -24,5 +24,22 @@ namespace LearningScripts.Controllers
             //abc.cshtnl
             //return View("abc");
         }
+
+        [Route("book-details/{bookid}")]
+        public IActionResult Details(int? bookid)
+        {
+            if (bookid != null)
+            {
+                List<Book> books = new List<Book>()
+            {
+             new Book() {BookId=3, Author= "Manford",AuthorGender= Book.Gender.Male, ReleaseDate=DateTime.Parse ("2001-09-15")},
+             new Book() {BookId=2, Author= "Wenji",AuthorGender= Book.Gender.Female, ReleaseDate=DateTime.Parse ("2003-09-15")},
+             new Book() {BookId=1, Author= "Manf0rd",AuthorGender= Book.Gender.Other,ReleaseDate=DateTime.Parse ("2002-09-15")},
+             };
+                Book? matchingBook = books.Where(temp => temp.BookId == bookid).FirstOrDefault();
+                return View(matchingBook);
+            }
+            else { return Content("Book ID can't be null"); }
+        }
     }
 }
