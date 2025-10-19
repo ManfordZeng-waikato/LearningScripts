@@ -50,6 +50,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- Strongly Type	Views
 	  - With Multiple Models
 	- _ViewImports
+	- Shared Views
 
- 
 - Personal learning notes  
