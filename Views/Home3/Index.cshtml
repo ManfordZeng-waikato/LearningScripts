@@ -1,5 +1,5 @@
 ﻿@using LearningScripts.Models
-
+@model IEnumerable<Book>
 
 @{
     double? GetAge(DateTime? releaseDate)
@@ -54,7 +54,7 @@
       // List<Book>? books= (List<Book>) ViewData["books"];
     }
 
-    @foreach (Book book in ViewBag.books)
+    @foreach (Book book in Model)
     {
         @:Hello to
         <div class="box">

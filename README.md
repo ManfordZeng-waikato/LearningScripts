@@ -47,5 +47,6 @@ The code is written for study purposes only and does not provide real applicatio
 	- Html.Raw()
 	- View Data
 	- View Bag
+	- Strongly Type	Views
  
 - Personal learning notes  

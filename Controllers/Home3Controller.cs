@@ -16,10 +16,10 @@ namespace LearningScripts.Controllers
              new Book() {BookId=1, Author= "Manf0rd",AuthorGender= Book.Gender.Other,ReleaseDate=DateTime.Parse ("2002-09-15")},
              };
             //ViewData["books"] = books;
-            ViewBag.books = books;
+            //ViewBag.books = books;
 
             //views/Home/Index.cshtml
-            return View();
+            return View("Index", books);
 
             //abc.cshtnl
             //return View("abc");
