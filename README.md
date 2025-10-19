@@ -36,7 +36,7 @@ The code is written for study purposes only and does not provide real applicatio
   - Custom Model Binders
   - Custom Model Binder Providers 
   - Collection Binding
--Model View Controller
+- Model View Controller
   - View
   - Razor View Engine
 	- If
@@ -49,5 +49,7 @@ The code is written for study purposes only and does not provide real applicatio
 	- View Bag
 	- Strongly Type	Views
 	  - With Multiple Models
+	- _ViewImports
+
  
 - Personal learning notes  
