@@ -5,7 +5,7 @@ namespace LearningScripts.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/")]
+        //[Route("/")]
         public ContentResult method1()
         {
 

@@ -51,5 +51,8 @@ The code is written for study purposes only and does not provide real applicatio
 	  - With Multiple Models
 	- _ViewImports
 	- Shared Views
+  - Layout Views
+	-  _Layout and @RenderBody
+  
 
 - Personal learning notes  
