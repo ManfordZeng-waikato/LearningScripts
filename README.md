@@ -2,6 +2,7 @@
 
 This repository contains my practice scripts and notes while learning **ASP.NET Core**.  
 The code is written for study purposes only and does not provide real application functionality.
+Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 
 ## Contents
 - Basic middleware exercises  
@@ -56,6 +57,7 @@ The code is written for study purposes only and does not provide real applicatio
 	  - With Multiple Views
 	  - View Data
 	  - _ViewStart.cshtml
+	  - Dynamic Layout Views
     
   
 
