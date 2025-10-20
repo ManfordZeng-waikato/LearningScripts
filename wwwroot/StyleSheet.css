@@ -1,138 +1,225 @@
-/* =====================================
-   StyleSheet.css — Simple and clean page styling
-   Designed for Razor / ASP.NET MVC pages
-   ===================================== */
-
-:root {
-    --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    --color-bg: #f5f7fa;
-    --color-surface: #ffffff;
-    --color-text: #1a1a1a;
-    --color-muted: #6b7280;
-    --color-primary: #2563eb;
-    --color-primary-hover: #1e40af;
-    --radius-md: 10px;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    background-color: #f7f7f7;
 }
 
-/* Basic Page Style */
-body {
-    margin: 0;
-    font-family: var(--font-sans);
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.6;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    min-width: 500px;
+}
+
+.navbar {
+    background-color: #cacaca;
+    padding: 10px;
+    box-shadow: 0px 1px 2px 2px #cacaca;
+}
+
+.navbar-brand {
+    margin: 0px 30px 5px 5px;
+    font-size: 1.1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar > ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+    .navbar > ul > li {
+        width: 100%;
+    }
+
+        .navbar > ul > li > a:link, .navbar > ul > li > a:visited {
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.4s;
+            display: inline-block;
+            margin: 0px 3px;
+            color: #1383a4;
+            text-decoration: none;
+        }
+
+        .navbar > ul > li > a:hover {
+            background-color: #ffffff;
+            color: #086581;
+        }
+
+.nav-active {
+    background-color: #ececec;
 }
 
 .page-content {
-    width: min(95%, 900px);
-    margin: 2rem auto;
-    padding: 2rem;
-    background: var(--color-surface);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow);
+    min-height: 90vh;
+    padding: 15px 20px;
 }
 
-h1, h2, h3 {
-    color: var(--color-primary);
-    margin-top: 0;
+.full-size-height {
+    min-height: 100vh;
 }
 
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-p, span, div {
-    font-size: 1rem;
-    color: var(--color-text);
-}
-
-/* Card Style for Each Book */
-.book-card {
-    background: #fff;
-    border-radius: var(--radius-md);
-    padding: 1rem 1.5rem;
-    margin-bottom: 1rem;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-    .book-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    }
-
-    .book-card span {
-        display: inline-block;
-        margin-right: 0.5rem;
-        color: var(--color-muted);
-    }
-
-/* Button Style */
-button, .btn {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s ease;
-}
-
-    button:hover, .btn:hover {
-        background-color: var(--color-primary-hover);
-    }
-
-/* Table Style */
-table {
-    width: 100%;
+.table {
     border-collapse: collapse;
-    margin-top: 1.5rem;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    box-shadow: 0px 0px 4px 2px #e4e4e4;
+    margin: 10px 0px;
+    margin: auto;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+    .table thead {
+        background-color: #727774;
+        color: #ffffff;
+    }
+
+        .table thead th {
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+    .table tbody td {
+        padding: 6px 10px;
+    }
+
+    .table tbody tr {
+        transition: background-color 0.4s, color 0.3s;
+        background-color: #efefef;
+        border-bottom: 1px solid #ffffff;
+    }
+
+        .table tbody tr:hover {
+            background-color: #01759d;
+            color: #ffffff;
+        }
+
+.w-25 {
+    width: 25%;
 }
 
-th, td {
-    padding: 0.75rem 1rem;
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.grey-back {
+    background-color: #dcdcdc;
+}
+
+.white-back {
+    background-color: #ffffff;
+}
+
+.text-green {
+    color: #0a8438;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+.text-left {
     text-align: left;
 }
 
-th {
-    background-color: #e8ecf5;
-    color: #333;
+.text-right {
+    text-align: right;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Footer */
-footer {
+.text-center {
     text-align: center;
-    margin-top: 2rem;
-    padding: 1rem;
-    color: var(--color-muted);
-    font-size: 0.9rem;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .page-content {
-        padding: 1rem;
+.margin-auto {
+    margin: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.blue-back {
+    background-color: #9ad3f7;
+}
+
+.footer-content {
+    background-color: #bfbfbf;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    background-color: #055c87;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.box {
+    margin: 10px 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #d3d1d1;
+    box-shadow: 0px 0px 3px 2px #ffffff;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+    .flex > div {
+        padding: 15px;
     }
 
-    h1 {
-        font-size: 1.6rem;
+.flex-1 {
+    flex: 1 auto;
+}
+
+.flex-2 {
+    flex: 2 auto;
+}
+
+.flex-3 {
+    flex: 3 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    .navbar-brand {
+        display: inline-block;
+        margin-bottom: 0px;
     }
 
-    h2 {
-        font-size: 1.3rem;
+    .navbar > ul {
+        display: inline-block;
+        width: auto;
     }
+
+        .navbar > ul > li {
+            display: inline-block;
+            width: auto;
+        }
 }

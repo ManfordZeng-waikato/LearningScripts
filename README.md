@@ -55,6 +55,7 @@ The code is written for study purposes only and does not provide real applicatio
 	  - _Layout and @RenderBody
 	  - With Multiple Views
 	  - View Data
+	  - _ViewStart.cshtml
     
   
 
