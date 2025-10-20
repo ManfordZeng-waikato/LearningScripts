@@ -58,6 +58,7 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 	  - View Data
 	  - _ViewStart.cshtml
 	  - Dynamic Layout Views
+	  - Layout Views - Sections
     
   
 
