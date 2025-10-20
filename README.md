@@ -54,6 +54,7 @@ The code is written for study purposes only and does not provide real applicatio
     - Layout Views
 	  - _Layout and @RenderBody
 	  - With Multiple Views
+	  - View Data
     
   
 
