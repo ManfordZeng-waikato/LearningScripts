@@ -4,3 +4,22 @@
 
 <h1>Home</h1>
 <partial name="_ListPartialView"></partial>
+
+@{
+    var myViewData = new ViewDataDictionary(ViewData);
+
+
+    myViewData["ListTitle"] = "Countries";
+    myViewData["ListItems"] = new List<string>()
+            {
+                "China",
+                "Japan",
+                "USA",
+                "NZ"};
+}
+
+<div class="box">
+    <partial name="_ListPartialView" view-data="myViewData"></partial>
+</div>
+
+<h3>ListTitle in view : @ViewBag.ListTitle</h3>
