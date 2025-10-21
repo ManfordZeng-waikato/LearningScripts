@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LearningScripts.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LearningScripts.Controllers
 {
@@ -20,6 +21,24 @@ namespace LearningScripts.Controllers
         public IActionResult Contact()
         {
             return View();
+        }
+
+        [Route("language")]
+        public IActionResult Language()
+        {
+            ListModel listModel = new ListModel()
+            {
+                ListTitle = "Language",
+                ListItems = new List<string>()
+                {
+                "Chinese",
+                "Japanese",
+                "English",
+                "Hindi",
+                }
+            };
+
+            return PartialView("_ListPartialView", listModel);
         }
     }
 }
