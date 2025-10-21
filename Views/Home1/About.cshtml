@@ -4,5 +4,16 @@
 <h1>About</h1>
 
 @{
-    await Html.RenderPartialAsync("_ListPartialView",ViewData);
+    ListModel listModel = new ListModel();
+    listModel.ListTitle = "Language";
+    listModel.ListItems = new List<string>()
+    {
+
+                "Chinese",
+                "Japanese",
+                "English",
+                "Hindi",
+                };
+
+    await Html.RenderPartialAsync("_ListPartialView",listModel);
 }

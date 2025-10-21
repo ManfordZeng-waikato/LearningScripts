@@ -61,6 +61,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 	  - Layout Views - Sections
     - Partial Views
 	  - With ViewData
+	  - Strongly Typed Partial Views
 	  
-  
 - Personal learning notes  
