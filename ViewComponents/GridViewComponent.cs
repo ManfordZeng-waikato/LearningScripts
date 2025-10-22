@@ -18,10 +18,8 @@ namespace LearningScripts.ViewComponents
                     new Book (){ BookId=4,Author="Wenji", AuthorGender= Book.Gender.Other}
                 }
             };
-            ViewBag.Grid = bookGridModel;
-
             //Viwes/Shared/Components/Grid/Default.cshtml
-            return View();
+            return View(bookGridModel);
         }
     }
 }
