@@ -4,38 +4,11 @@
 
 <h1>Home</h1>
 
-@{
-    BookGridModel bookGridModel = new BookGridModel()
-    {
-        GridTitle = "Books List",
-        Books = new List<Book>()
-                {
-                    new Book (){ BookId=1,Author="Manford", AuthorGender= Book.Gender.Male},
-                    new Book (){ BookId=2,Author="Manf0rd", AuthorGender= Book.Gender.Female},
-                    new Book (){ BookId=3,Author="Chang", AuthorGender= Book.Gender.Male},
-                    new Book (){ BookId=4,Author="Wenji", AuthorGender= Book.Gender.Other}
-                }
-    };
-}
-
-@await Component.InvokeAsync("Grid", new{grid=bookGridModel})
-
-@{
-    BookGridModel bookGridModel2 = new BookGridModel()
-    {
-        GridTitle = "Authors List",
-        Books = new List<Book>()
-                {
-                    new Book (){ BookId=1,Author="VIM", AuthorGender= Book.Gender.Male},
-                    new Book (){ BookId=2,Author="Will", AuthorGender= Book.Gender.Female},
-                    new Book (){ BookId=3,Author="Ibsen", AuthorGender= Book.Gender.Male},
-                    new Book (){ BookId=4,Author="Wenji", AuthorGender= Book.Gender.Other}
-                }
-    };
-}
-
-@await Component.InvokeAsync("Grid", new { grid = bookGridModel2 })
-
+<button class="button button-blue-back" type="button" id="load-authors-button">
+    Load Authors List
+</button> 
+<div id="list"></div>
+<script src="~/Authors.js"></script>
 
 @* @{
     ListModel listModel = new ListModel();

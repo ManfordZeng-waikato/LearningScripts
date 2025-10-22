@@ -72,4 +72,5 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 	- With ViewData
 	- Strongly Typed ViewComponent
 	- With Parameters
+	- View Component Result
 - Personal learning notes  
