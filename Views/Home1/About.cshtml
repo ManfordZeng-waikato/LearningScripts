@@ -3,9 +3,23 @@
 }
 <h1>About</h1>
 
-@await Component.InvokeAsync("Grid")
+@{
+    BookGridModel bookGridModel = new BookGridModel()
+    {
+        GridTitle = "Employees List",
+        Books = new List<Book>()
+                {
+                    new Book (){ BookId=1,Author="Manford", AuthorGender= Book.Gender.Male},
+                    new Book (){ BookId=2,Author="Manf0rd", AuthorGender= Book.Gender.Female},
+                    new Book (){ BookId=3,Author="Chang", AuthorGender= Book.Gender.Male},
+                    new Book (){ BookId=4,Author="Wenji", AuthorGender= Book.Gender.Other}
+                }
+    };
+}
 
-<vc:grid></vc:grid>
+@await Component.InvokeAsync("Grid", new { grid = bookGridModel })
+
+<vc:grid grid="bookGridModel"></vc:grid>
 
 @{
     ListModel listModel = new ListModel();
