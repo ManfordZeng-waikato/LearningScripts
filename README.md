@@ -6,12 +6,16 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 
 ## Contents
 - Basic middleware exercises  
-- Request and response handling  
+
+- Request and response handling 
+
 - Routing  and static files
+
 - Controller and Controller class
   - IActionResult
   - Status Code Results
   - Redirect Results
+
 - Model Binding
   - Query String vs Route Data
   - Model Class
@@ -37,6 +41,7 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - Custom Model Binders
   - Custom Model Binder Providers 
   - Collection Binding
+
 - Model View Controller
   - View
   - Razor View Engine
@@ -48,20 +53,21 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 	- Html.Raw()
 	- View Data
 	- View Bag
-	- Strongly Type	Views
-	  - With Multiple Models
-	- _ViewImports
-	- Shared Views
-    - Layout Views
-	  - _Layout and @RenderBody
-	  - With Multiple Views
-	  - View Data
-	  - _ViewStart.cshtml
-	  - Dynamic Layout Views
-	  - Layout Views - Sections
-    - Partial Views
-	  - With ViewData
-	  - Strongly Typed Partial Views
-	  - Partial View Result
+  - Strongly Type Views
+	- With Multiple Models
+  - _ViewImports
+  - Shared Views
+  - Layout Views
+	- _Layout and @RenderBody
+	- With Multiple Views
+	- View Data
+	- _ViewStart.cshtml
+	- Dynamic Layout Views
+	- Layout Views - Sections
+  - Partial Views
+    - With ViewData
+	- Strongly Typed Partial Views
+	- Partial View Result
+  - View Components
 	  
 - Personal learning notes  
