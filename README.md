@@ -73,4 +73,7 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 	- Strongly Typed ViewComponent
 	- With Parameters
 	- View Component Result
+
+- Services
+
 - Personal learning notes  
