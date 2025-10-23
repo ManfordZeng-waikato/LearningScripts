@@ -5,7 +5,7 @@ namespace LearningScripts.Controllers
 {
     public class CitiesController : Controller
     {
-        private readonly ICitiesService citiesService;
+        private readonly ICitiesService _citiesService;
 
         public CitiesController()
         {
@@ -15,7 +15,7 @@ namespace LearningScripts.Controllers
         [Route("/")]
         public IActionResult Index()
         {
-            List<string> cities = citiesService.GetCities();
+            List<string> cities = _citiesService.GetCities();
             return View(cities);
         }
     }

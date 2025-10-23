@@ -1,4 +1,6 @@
 using LearningScripts.CustomConstraints;
+using ServiceContracts;
+using Services;
 
 namespace LearningScripts
 {
@@ -15,7 +17,8 @@ namespace LearningScripts
 
 
             builder.Services.AddControllersWithViews();
-
+            builder.Services.Add(new ServiceDescriptor
+                (typeof(ICitiesService), typeof(CitiesService), ServiceLifetime.Transient));
 
             //register custom custom constraints service
             builder.Services.AddRouting(options =>
