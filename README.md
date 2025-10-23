@@ -77,6 +77,7 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 - Services
   - Dependency Inversion Principle
   - Inversion of Control
-  - Dependency Injection
+  - Dependency Injection(Constructor Injection)
+    - Method Injection
   
 - Personal learning notes  
