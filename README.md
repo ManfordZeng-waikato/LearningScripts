@@ -75,5 +75,5 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 	- View Component Result
 
 - Services
-
+  - Dependency Inversion Principle
 - Personal learning notes  

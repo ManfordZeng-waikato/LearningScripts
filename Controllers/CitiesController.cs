@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Services;
+using ServiceContracts;
 
 namespace LearningScripts.Controllers
 {
     public class CitiesController : Controller
     {
-        private readonly CitiesService citiesService;
+        private readonly ICitiesService citiesService;
 
         public CitiesController()
         {
-            citiesService = new CitiesService();
+            //citiesService = new CitiesService();
         }
 
         [Route("/")]
