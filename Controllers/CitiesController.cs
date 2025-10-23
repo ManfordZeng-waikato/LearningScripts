@@ -7,9 +7,10 @@ namespace LearningScripts.Controllers
     {
         private readonly ICitiesService _citiesService;
 
-        public CitiesController()
+        public CitiesController(ICitiesService citiesService)
         {
             //citiesService = new CitiesService();
+            _citiesService = citiesService;
         }
 
         [Route("/")]
