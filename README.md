@@ -81,5 +81,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
     - Method Injection
   - Transient,Scoped & Singleton
   - Service Scope, "using(){}", IDisposable
+  - AddSingleton<ICitiesService, CitiesService>(), AddTransient, AddScoped
   
 - Personal learning notes  
