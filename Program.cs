@@ -18,7 +18,7 @@ namespace LearningScripts
 
             builder.Services.AddControllersWithViews();
             builder.Services.Add(new ServiceDescriptor
-                (typeof(ICitiesService), typeof(CitiesService), ServiceLifetime.Singleton));
+                (typeof(ICitiesService), typeof(CitiesService), ServiceLifetime.Scoped));
 
             //register custom custom constraints service
             builder.Services.AddRouting(options =>

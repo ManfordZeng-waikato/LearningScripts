@@ -80,5 +80,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - Dependency Injection(Constructor Injection)
     - Method Injection
   - Transient,Scoped & Singleton
+  - Service Scope, "using(){}", IDisposable
   
 - Personal learning notes  
