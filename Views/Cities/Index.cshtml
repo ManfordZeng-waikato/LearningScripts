@@ -1,12 +1,16 @@
 ﻿@model IEnumerable<string>
+@inject ICitiesService citiesServiceInView
 @{
     ViewBag.Title = "Home";
 }
 
 <h1>Cities</h1>
+@{
+    List<string> citiesServiceFromView = citiesServiceInView.GetCities();
+}
 
 <ul class="list">
-@foreach (string city in Model)
+@foreach (string city in citiesServiceFromView)
 {
     <li>@city</li>
     }
@@ -15,4 +19,5 @@
 <div>@ViewBag._citiesServiceId</div>
 <div>@ViewBag._citiesServiceId1</div>
 <div>@ViewBag._citiesServiceId2</div>
-<div>@ViewBag._citiesServiceId_InScope </div> 
+<div>@citiesServiceInView.ServiceInstanceId </div> 
+<div class="box">@ViewBag._citiesServiceId_InScope </div>

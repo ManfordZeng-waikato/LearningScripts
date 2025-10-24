@@ -16,7 +16,7 @@ namespace LearningScripts
             //builder.Services.AddTransient<MycustomMiddleware>();
 
 
-            //builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews();
             //builder.Services.Add(new ServiceDescriptor
             //    (typeof(ICitiesService), typeof(CitiesService), ServiceLifetime.Scoped));
             //builder.Services.AddTransient<ICitiesService, CitiesService>();
