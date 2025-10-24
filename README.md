@@ -79,5 +79,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - Inversion of Control
   - Dependency Injection(Constructor Injection)
     - Method Injection
+  - Transient,Scoped & Singleton
   
 - Personal learning notes  
