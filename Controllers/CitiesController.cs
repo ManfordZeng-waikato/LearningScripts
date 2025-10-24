@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Autofac;
+using Microsoft.AspNetCore.Mvc;
 using ServiceContracts;
 
 namespace LearningScripts.Controllers
@@ -8,18 +9,17 @@ namespace LearningScripts.Controllers
         private readonly ICitiesService _citiesService;
         private readonly ICitiesService _citiesService1;
         private readonly ICitiesService _citiesService2;
-        private readonly IServiceScopeFactory _servicescopeFactory;
+        private readonly ILifetimeScope _lifeTimeScope;
 
         public CitiesController(ICitiesService citiesService,
             ICitiesService citiesService1, ICitiesService citiesService2,
-            IServiceScopeFactory servicescopeFactory)
+            ILifetimeScope servicescopeFactory)
         {
             //citiesService = new CitiesService();
             _citiesService = citiesService;
             _citiesService1 = citiesService1;
             _citiesService2 = citiesService2;
-            _servicescopeFactory = servicescopeFactory;
-            _servicescopeFactory = servicescopeFactory;
+            _lifeTimeScope = servicescopeFactory;
         }
 
         [Route("/")]
@@ -31,10 +31,10 @@ namespace LearningScripts.Controllers
             ViewBag._citiesServiceId1 = _citiesService1.ServiceInstanceId;
             ViewBag._citiesServiceId2 = _citiesService2.ServiceInstanceId;
 
-            using (IServiceScope scope = _servicescopeFactory.CreateScope())
+            using (var scope = _lifeTimeScope.BeginLifetimeScope())
             {
                 //inject CitiesService, connect to DB
-                ICitiesService citiesService = scope.ServiceProvider.GetRequiredService<ICitiesService>();
+                ICitiesService citiesService = scope.Resolve<ICitiesService>();
                 //DB work
 
                 ViewBag._citiesServiceId_InScope = citiesService.ServiceInstanceId;
