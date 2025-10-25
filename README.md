@@ -85,5 +85,8 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - View Injection
   - Best Practices for Dependency Injection
   - AutoFAC
+
+- Environment
+  -	In LaunchSettings.json
   
 - Personal learning notes  
