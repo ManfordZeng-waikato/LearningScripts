@@ -4,22 +4,34 @@
     ViewBag.Title = "Home";
 }
 
+<environment include="Development">
+    <button class="button button-blue-back">
+        Button Only For Development Environment
+    </button>
+</environment>
+
+<environment exclude="Development">
+    <button class="button button-blue-back">
+        Button Only For Except in Development Environment
+    </button>
+</environment>
+
 <h1>Cities</h1>
 @{
     List<string> citiesServiceFromView = citiesServiceInView.GetCities();
 }
 
 <ul class="list">
-@foreach (string city in citiesServiceFromView)
-{
-    <li>@city</li>
+    @foreach (string city in citiesServiceFromView)
+    {
+        <li>@city</li>
     }
-</ul>  
+</ul>
 
 <div class="box">Environment:@ViewBag.CurrentEnvironment</div>
 
 <div>@ViewBag._citiesServiceId</div>
 <div>@ViewBag._citiesServiceId1</div>
 <div>@ViewBag._citiesServiceId2</div>
-<div>@citiesServiceInView.ServiceInstanceId </div> 
+<div>@citiesServiceInView.ServiceInstanceId </div>
 <div class="box">@ViewBag._citiesServiceId_InScope </div>
