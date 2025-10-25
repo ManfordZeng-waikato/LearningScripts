@@ -10,21 +10,25 @@ namespace LearningScripts.Controllers
         private readonly ICitiesService _citiesService1;
         private readonly ICitiesService _citiesService2;
         private readonly ILifetimeScope _lifeTimeScope;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
         public CitiesController(ICitiesService citiesService,
             ICitiesService citiesService1, ICitiesService citiesService2,
-            ILifetimeScope servicescopeFactory)
+            ILifetimeScope servicescopeFactory, IWebHostEnvironment webHostEnvironment)
         {
             //citiesService = new CitiesService();
             _citiesService = citiesService;
             _citiesService1 = citiesService1;
             _citiesService2 = citiesService2;
             _lifeTimeScope = servicescopeFactory;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         [Route("/")]
         public IActionResult Index()
         {
+            ViewBag.CurrentEnvironment = _webHostEnvironment.EnvironmentName;
+
             List<string> cities = _citiesService.GetCities();
 
             ViewBag._citiesServiceId = _citiesService.ServiceInstanceId;
