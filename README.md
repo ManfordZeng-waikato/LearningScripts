@@ -90,4 +90,9 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   -	In LaunchSettings.json
   - In Controller
   - <environment>  Tag Helpler
+  - Process-Level Environment
+	PS: dotnet run --no-launch-profile
+	    $Env:ASPNETCORE_ENVIRONMENT="Staging"
+	    dotnet run
+
 - Personal learning notes  
