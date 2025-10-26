@@ -30,7 +30,9 @@ namespace LearningScripts.Controllers
         [Route("/")]
         public IActionResult Index()
         {
-            ViewBag.MyKey = _configuration["MyKey"];
+            //ViewBag.ClientID = _configuration["API:ClientID"];
+            ViewBag.ClientID = _configuration.GetSection("API")["ClientID"];
+            ViewBag.ClientSecret = _configuration.GetValue("API:ClientSecret", "The Default");
 
             ViewBag.CurrentEnvironment = _webHostEnvironment.EnvironmentName;
 
