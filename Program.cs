@@ -77,22 +77,22 @@ namespace LearningScripts
 
                 ////enable routing
                 app.UseRouting();
+                /*
+                                app.UseEndpoints(endpoints =>
+                                {
+                                    endpoints.Map("/Configuration", async context =>
+                                    {
+                                        await context.Response.WriteAsync(
+                                        app.Configuration["MyKey"] + "\n");
 
-                app.UseEndpoints(endpoints =>
-                {
-                    endpoints.Map("/Configuration", async context =>
-                    {
-                        await context.Response.WriteAsync(
-                        app.Configuration["MyKey"] + "\n");
+                                        await context.Response.WriteAsync(
+                                       app.Configuration.GetValue<string>("MyKey") + "\n");
 
-                        await context.Response.WriteAsync(
-                       app.Configuration.GetValue<string>("MyKey") + "\n");
-
-                        await context.Response.WriteAsync(
-                      app.Configuration.GetValue<int>("x", 10) + "\n");
-                    });
-                });
-
+                                        await context.Response.WriteAsync(
+                                      app.Configuration.GetValue<int>("x", 10) + "\n");
+                                    });
+                                });
+                */
                 //GetEndpoint Example   
                 //app.Use(async (context, next) =>
                 //{

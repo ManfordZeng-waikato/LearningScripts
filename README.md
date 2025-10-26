@@ -97,5 +97,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 
 - Configuration Settings
   - appsettings.json
+  - IConfiguration in Controller
 
 - Personal learning notes  
