@@ -101,5 +101,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - Hierarchical Configuration
   - Options Parttern
   - As Service
+  - Environment-Specific Configuration
 
 - Personal learning notes  
