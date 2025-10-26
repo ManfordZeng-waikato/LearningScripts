@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using LearningScripts.Models;
 using Microsoft.AspNetCore.Mvc;
 using ServiceContracts;
 
@@ -30,9 +31,13 @@ namespace LearningScripts.Controllers
         [Route("/")]
         public IActionResult Index()
         {
+            ApiOptions? options = _configuration.GetSection("API").Get<ApiOptions>();
+            ViewBag.ClientID = options.ClientID;
+            ViewBag.ClientSecret = options.ClientSecret;
+
             //ViewBag.ClientID = _configuration["API:ClientID"];
-            ViewBag.ClientID = _configuration.GetSection("API")["ClientID"];
-            ViewBag.ClientSecret = _configuration.GetValue("API:ClientSecret", "The Default");
+            //ViewBag.ClientID = _configuration.GetSection("API")["ClientID"];
+            //ViewBag.ClientSecret = _configuration.GetValue("API:ClientSecret", "The Default");
 
             ViewBag.CurrentEnvironment = _webHostEnvironment.EnvironmentName;
 

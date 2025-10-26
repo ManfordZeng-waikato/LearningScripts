@@ -99,5 +99,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - appsettings.json
   - IConfiguration in Controller
   - Hierarchical Configuration
+  - Options Parttern
 
 - Personal learning notes  
