@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using LearningScripts.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using ServiceContracts;
 
 namespace LearningScripts.Controllers
@@ -13,11 +14,13 @@ namespace LearningScripts.Controllers
         private readonly ILifetimeScope _lifeTimeScope;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IConfiguration _configuration;
+        private readonly ApiOptions _apiOptions;
 
         public CitiesController(ICitiesService citiesService,
             ICitiesService citiesService1, ICitiesService citiesService2,
             ILifetimeScope servicescopeFactory,
-            IWebHostEnvironment webHostEnvironment, IConfiguration configuration)
+            IWebHostEnvironment webHostEnvironment, IConfiguration configuration,
+            IOptions<ApiOptions> apioptions)
         {
             //citiesService = new CitiesService();
             _citiesService = citiesService;
@@ -26,18 +29,22 @@ namespace LearningScripts.Controllers
             _lifeTimeScope = servicescopeFactory;
             _webHostEnvironment = webHostEnvironment;
             _configuration = configuration;
+            _apiOptions = apioptions.Value;
         }
 
         [Route("/")]
         public IActionResult Index()
         {
-            ApiOptions? options = _configuration.GetSection("API").Get<ApiOptions>();
+            /*ApiOptions? options = _configuration.GetSection("API").Get<ApiOptions>();
             ViewBag.ClientID = options.ClientID;
-            ViewBag.ClientSecret = options.ClientSecret;
+            ViewBag.ClientSecret = options.ClientSecret;*/
 
             //ViewBag.ClientID = _configuration["API:ClientID"];
             //ViewBag.ClientID = _configuration.GetSection("API")["ClientID"];
             //ViewBag.ClientSecret = _configuration.GetValue("API:ClientSecret", "The Default");
+
+            ViewBag.ClientID = _apiOptions.ClientID;
+            ViewBag.ClientSecret = _apiOptions.ClientSecret;
 
             ViewBag.CurrentEnvironment = _webHostEnvironment.EnvironmentName;
 

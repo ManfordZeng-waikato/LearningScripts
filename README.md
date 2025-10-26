@@ -100,5 +100,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - IConfiguration in Controller
   - Hierarchical Configuration
   - Options Parttern
+  - As Service
 
 - Personal learning notes  

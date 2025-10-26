@@ -1,6 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using LearningScripts.CustomConstraints;
+using LearningScripts.Models;
 using ServiceContracts;
 using Services;
 
@@ -49,6 +50,8 @@ namespace LearningScripts
                     //options.ModelBinderProviders.Insert(0, new UserBinderProvider());
                 });
                 builder.Services.AddControllers().AddXmlSerializerFormatters();
+
+                builder.Services.Configure<ApiOptions>(builder.Configuration.GetSection("API"));
 
                 var app = builder.Build();
 
