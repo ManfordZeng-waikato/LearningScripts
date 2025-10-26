@@ -95,4 +95,7 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
 	    $Env:ASPNETCORE_ENVIRONMENT="Staging"
 	    dotnet run
 
+- Configuration Settings
+  - appsettings.json
+
 - Personal learning notes  
