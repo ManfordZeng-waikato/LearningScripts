@@ -2,6 +2,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using LearningScripts.CustomConstraints;
 using LearningScripts.Models;
+using LearningScripts.Services;
 using ServiceContracts;
 using Services;
 
@@ -31,6 +32,7 @@ namespace LearningScripts
                 //builder.Services.AddTransient<ICitiesService, CitiesService>();
                 //builder.Services.AddScoped<ICitiesService, CitiesService>();
                 //builder.Services.AddSingleton<ICitiesService, CitiesService>();
+                builder.Services.AddScoped<MyService>();
 
                 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
                 {
@@ -57,6 +59,7 @@ namespace LearningScripts
                 builder.Configuration.AddJsonFile("MyOwnConfig.json", optional: true, reloadOnChange: true);
 
                 builder.Services.AddHttpClient();
+
 
                 var app = builder.Build();
 
