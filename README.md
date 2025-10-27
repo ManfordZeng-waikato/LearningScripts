@@ -104,5 +104,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - Environment-Specific Configuration
   - Secrets Manager
   - Environment Variables Configuration
+  - Custom Json Configuration
 
 - Personal learning notes  

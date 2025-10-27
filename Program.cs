@@ -53,6 +53,9 @@ namespace LearningScripts
 
                 builder.Services.Configure<ApiOptions>(builder.Configuration.GetSection("API"));
 
+                //Load MyOwnConfig.json
+                builder.Configuration.AddJsonFile("MyOwnConfig.json", optional: true, reloadOnChange: true);
+
                 var app = builder.Build();
 
                 if (app.Environment.IsDevelopment())
