@@ -102,5 +102,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - Options Parttern
   - As Service
   - Environment-Specific Configuration
+  - Secrets Manager
 
 - Personal learning notes  
