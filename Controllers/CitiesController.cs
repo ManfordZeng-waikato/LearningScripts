@@ -32,7 +32,7 @@ namespace LearningScripts.Controllers
             _apiOptions = apioptions.Value;
         }
 
-        [Route("/")]
+        [Route("/cities")]
         public IActionResult Index()
         {
             /*ApiOptions? options = _configuration.GetSection("API").Get<ApiOptions>();

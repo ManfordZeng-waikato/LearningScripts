@@ -3,11 +3,12 @@
 <head>
     <title>@ViewData["Title"]</title>
     <meta charset="utf-8" />
-    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/StyleSheet.css" />
 </head>
 <body>
     <div class="container">
-       @*  <div class="navbar">
+        @*  <div class="navbar">
             <div class="navbar-brand">ASP.NET CORE APP </div>
             <ul>
                 <li><a href="~/">Home</a></li>
@@ -20,11 +21,25 @@
         </div> *@
 
         <div class="page-content">
+            <div class="margin-bottom">
+                <div class="flex" id="top-bar-div">
+                    <div class="flex-1" id="app-tittle-div">
+                        <h1 class="app-tittle">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            Stocks
+                        </h1>
+                    </div>
+
+                    <div class="flex-1">
+                        Login
+                    </div>
+                </div>
+            </div>
             @RenderBody()
         </div>
 
         <div class="footer-content">
-            @RenderSection("footer_section",false)
+            @RenderSection("footer_section", false)
         </div>
     </div>
 </body>

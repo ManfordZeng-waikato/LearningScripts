@@ -56,6 +56,8 @@ namespace LearningScripts
                 //Load MyOwnConfig.json
                 builder.Configuration.AddJsonFile("MyOwnConfig.json", optional: true, reloadOnChange: true);
 
+                builder.Services.AddHttpClient();
+
                 var app = builder.Build();
 
                 if (app.Environment.IsDevelopment())

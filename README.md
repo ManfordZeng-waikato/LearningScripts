@@ -106,4 +106,6 @@ Copyright from https://github.com/Harsha-Global/AspNetCore-Harsha
   - Environment Variables Configuration
   - Custom Json Configuration
 
+- Http Client
+  
 - Personal learning notes  
