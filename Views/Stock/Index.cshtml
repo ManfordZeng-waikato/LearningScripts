@@ -1,3 +1,38 @@
-﻿@{
+﻿@model Stock
+@{
     ViewBag.Title = "Stock";
 }
+
+<div class="box trading-panel">
+    <div class="flex trading-panel-flax">
+        <div id="stock-price-panel">
+            <div class="stock">
+                <h1 class="stock-tittle">@Model.StockSymbol</h1>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Current:</td>
+                            <th><span class="price"><small>$</small>@Model.CurrentPrice</span></th>
+                        </tr>
+
+                        <tr>
+                            <td>Highest:</td>
+                            <th><span class="price"><small>$</small>@Model.HighestPrice</span></th>
+                        </tr>
+
+                        <tr>
+                            <td>Lowest:</td>
+                            <th><span class="price"><small>$</small>@Model.LowestPrice</span></th>
+                        </tr>
+
+                        <tr>
+                            <td>Open:</td>
+                            <th><span class="price"><small>$</small>@Model.OpenPrice</span></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

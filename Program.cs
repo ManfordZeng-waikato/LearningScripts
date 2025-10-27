@@ -32,7 +32,7 @@ namespace LearningScripts
                 //builder.Services.AddTransient<ICitiesService, CitiesService>();
                 //builder.Services.AddScoped<ICitiesService, CitiesService>();
                 //builder.Services.AddSingleton<ICitiesService, CitiesService>();
-                builder.Services.AddScoped<MyService>();
+                builder.Services.AddScoped<FinnhubService>();
 
                 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
                 {
@@ -54,6 +54,7 @@ namespace LearningScripts
                 builder.Services.AddControllers().AddXmlSerializerFormatters();
 
                 builder.Services.Configure<ApiOptions>(builder.Configuration.GetSection("API"));
+                builder.Services.Configure<TradingOptions>(builder.Configuration.GetSection("TradingOptions"));
 
                 //Load MyOwnConfig.json
                 builder.Configuration.AddJsonFile("MyOwnConfig.json", optional: true, reloadOnChange: true);
